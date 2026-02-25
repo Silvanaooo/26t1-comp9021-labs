@@ -20,7 +20,7 @@ def f3_2(L: list[int]) -> None:
 
     # collect suffix values < e
     i = len(L) - 2
-    while i >= 0 and L[i] < e:
+    while L[i] < e:
         to_delete.add(L[i])
         i -= 1
 
@@ -44,7 +44,7 @@ def f3_3(L: list[int]) -> None:
     to_remove = []  # collect all x
 
     # scan from the end as long as L[i] < e
-    while len(L) > 1 and L[i] < e:
+    while L[i] < e:
         to_remove.append(L[i])
         i = i - 1
 
