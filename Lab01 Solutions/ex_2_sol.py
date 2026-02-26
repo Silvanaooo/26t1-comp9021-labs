@@ -3,8 +3,6 @@ def f2_1(n: int) -> str:
     Pattern with n lines, each line has n digits of n.
     Uses string multiplication + concatenation in one expression.
     """
-    if n == 0:
-        return ""
     # Multiply string and add "\n", then repeat n times
     return (str(n) * n + "\n") * n
 
@@ -14,9 +12,6 @@ def f2_2(n: int) -> str:
     Pattern with n lines, each line has n digits of n.
     Uses a loop with string concatenation.
     """
-    if n == 0:
-        return ""
-
     result = ""
     # Build result line by line
     for _ in range(n):
