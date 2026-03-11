@@ -7,6 +7,65 @@ https://www.geeksforgeeks.org/dsa/pattern-printing-problems/?utm_source=chatgpt.
 https://www.hackerrank.com/contests/pattern-programs/challenges
 """
 
+"""
+Main thing to remember in this question are:
+1. The standard library module `string`,
+especially useful constants such as `string.ascii_uppercase`, 'string.ascii_lowercase'
+
+2. `cycle()` from `itertools`.
+It creates an iterator that keeps going through the same values again and again.
+We can use `next()` to get the next item from that iterator.
+
+3. str.center(width)`
+It centers a string in a field of width `width` by adding spaces on both sides if needed.
+
+4. `format(value, f"^{width}")`
+This can also be used to center a string. The symbol `^` means centre alignment.
+
+5. Use slicing to reverse a list or string. 
+[::-1]
+
+"""
+
+"""
+Slicing Summary
+
+sequence[start : stop : step]
+
+- start: where to start
+- stop : where to stop (NOT included)
+- step : how many positions to move each time
+
+Important:
+- If step > 0, slicing moves from left to right.
+- If step < 0, slicing moves from right to left.
+
+So when start is omitted:
+- with a positive step, Python starts from the beginning
+- with a negative step, Python starts from the end
+
+e.g.
+a = "ABCDSD"
+a[1:4:2]
+Start at index 1, stop before index 4, move 2 steps each time.
+Take index 1 -> 'B', index 3 -> 'D'
+Result: 'BD'
+
+a[::-1]
+step = -1 means move backwards one position each time.
+Start and stop are omitted, and step is negative Python starts from the end.
+Result: reverse the sequence
+
+a[:2:-2]
+step = -2 means move backwards two positions each time.
+Start is omitted, stop is 2, and step is negative, so Python starts from the end.
+Index 2 is not included.
+Result: 'DS'
+
+Most importantly, remember that [::-1] is a simple way to reverse a sequence.
+
+"""
+
 def solution_6_1():
     """
     Prompts the user for a strictly positive integer n and prints a character triangle of height n.
